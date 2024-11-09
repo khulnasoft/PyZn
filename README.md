@@ -1,6 +1,6 @@
 ## PyZn - Python Zone for analytics 
 
-<p align="center">
+<p>
   <a aria-label="KhulnaSoft logo" href="https://khulnasoft.com/"><img src="https://img.shields.io/badge/MADE%20BY%20KhulnaSoft-000000.svg?style=for-the-badge&logo=KhulnaSoft&labelColor=000"></a>
   <a aria-label="License" href="https://github.com/khulnasoft/pyzn/blob/main/LICENSE"><img alt="" src="https://img.shields.io/npm/l/turbo.svg?style=for-the-badge&labelColor=000000&color="></a>
 </p>
