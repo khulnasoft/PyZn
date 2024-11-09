@@ -1,4 +1,4 @@
-## PyZn
+## PyZn - Python Zone for analytics 
 
 ## 📜 About
 [pyzn.kulnasoft.com](https://pyzn.kulnasoft.com) is a site which aims to show statistics about Python packages.
