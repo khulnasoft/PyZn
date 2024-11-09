@@ -5,16 +5,6 @@
   <a aria-label="License" href="https://github.com/khulnasoft/pyzn/blob/main/LICENSE"><img alt="" src="https://img.shields.io/npm/l/turbo.svg?style=for-the-badge&labelColor=000000&color="></a>
 </p>
 
-## 📜 About
-[pyzn.kulnasoft.com](https://pyzn.kulnasoft.com) is a site which aims to show statistics about Python packages.
-
-## 💖 Sponsors
-
-We can keep alive the website thanks to you and also thanks to the following sponsors.
-
-<!-- sponsors -->
-<!-- sponsors -->
-
 ## ⚒️ Start contributing
 I wanted to make the setup of the environment as easy as possible. To start the environment you need the 
 following prerequisites:
@@ -45,7 +35,17 @@ The structure of the code is the following:
     * `pyzn/infrastructure/cli`: the command line programs.
     * `pyzn/infrastructure/container`: config files and the dependency injection manager.
     * `pyzn/infrastructure/api`: the api endpoints controller.
-    
+
+## 📜 About
+[pyzn.kulnasoft.com](https://pyzn.kulnasoft.com) is a site which aims to show statistics about Python packages.
+
+## 💖 Sponsors
+
+We can keep alive the website thanks to you and also thanks to the following sponsors.
+
+<!-- sponsors -->
+<!-- sponsors -->
+
 ## FAQ
 **Where the downloads come from?**
 
