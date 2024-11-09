@@ -1,11 +1,31 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - master
+on: pull_request
 
 jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Approve a PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{steps.metadata.outputs.update-type != 'version-update:semver-major'}}
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.ORG_REPO_TOKEN}}
   tests:
     name: Tests
     runs-on: ubuntu-22.04
@@ -25,10 +45,8 @@ jobs:
           start: npm run start
           browser: chrome
   publish:
-    needs:
-      - tests
     runs-on: ubuntu-latest
-    environment: Production
+    environment: Preview
     permissions:
       contents: read
       deployments: write
@@ -48,9 +66,9 @@ jobs:
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: c26be9b36a513ce4fc9074e8071346dd
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: pyzn
-          branch:  master
+          branch: ${{ github.head_ref || github.ref_name }}
           directory: .vercel/output/static
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
