@@ -1,12 +1,4 @@
-<p align="center">
-  <img width="100px" alt="pyzn-logo"
-    src="docs/logo.png"
-  />
-</p>
-
-<h2 align="center"><code>PyZn</code></h2>
-
-
+## PyZn
 
 ## 📜 About
 [pyzn.kulnasoft.com](https://pyzn.kulnasoft.com) is a site which aims to show statistics about Python packages.
