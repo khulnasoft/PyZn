@@ -1,5 +1,11 @@
 ## PyZn - Python Zone for analytics 
 
+<p align="center">
+  <a aria-label="KhulnaSoft logo" href="https://khulnasoft.com/"><img src="https://img.shields.io/badge/MADE%20BY%20KhulnaSoft-000000.svg?style=for-the-badge&logo=KhulnaSoft&labelColor=000"></a>
+  <a aria-label="License" href="https://github.com/khulnasoft/pyzn/blob/main/LICENSE"><img alt="" src="https://img.shields.io/npm/l/turbo.svg?style=for-the-badge&labelColor=000000&color="></a>
+  <a aria-label="Join the community on GitHub" href="https://github.com/khulnasoft/pyzn/discussions"><img alt="" src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&logo=pyzn&labelColor=000000&logoWidth=20&logoColor=white"></a>
+</p>
+
 ## 📜 About
 [pyzn.kulnasoft.com](https://pyzn.kulnasoft.com) is a site which aims to show statistics about Python packages.
 
