@@ -23,4 +23,4 @@ jobs:
           body: "Sponsors now are up to date"
           commit-message: "feat: update sponsors"
           delete-branch: true
-          base:  master
+          base:  develop
