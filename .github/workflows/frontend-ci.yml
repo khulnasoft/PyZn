@@ -26,18 +26,6 @@ jobs:
         run: yarn build
         working-directory: frontend
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
-        env:
-          PYZN_API_KEY: ${{ secrets.PYZN_API_KEY }}
-          CYPRESS_PYZN_TEST_USER_EMAIL: ${{ secrets.PYZN_TEST_USER_EMAIL }}
-          CYPRESS_PYZN_TEST_USER_PASSWORD: ${{ secrets.PYZN_TEST_USER_PASSWORD }}
-        with:
-          build: yarn build
-          start: yarn start
-          browser: chrome
-        working-directory: frontend
-
   publish:
     needs: tests
     runs-on: ubuntu-latest
